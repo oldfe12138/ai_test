@@ -10,4 +10,5 @@ import com.mybatisflex.core.service.IService;
  */
 public interface ChatHistoryService extends IService<ChatHistory> {
 
+    boolean addChatMessage(Long appId, String message, String messageType, Long userId);
 }

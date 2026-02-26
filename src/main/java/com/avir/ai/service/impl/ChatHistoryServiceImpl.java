@@ -14,4 +14,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class ChatHistoryServiceImpl extends ServiceImpl<ChatHistoryMapper, ChatHistory>  implements ChatHistoryService{
 
+    @Override
+    public boolean addChatMessage(Long appId, String message, String messageType, Long userId) {
+        // 插入数据库
+        ChatHistory chatHistory = ChatHistory.builder()
+                .appId(appId)
+                .message(message)
+                .messageType(messageType)
+                .userId(userId)
+                .build();
+        return this.save(chatHistory);
+    }
+
 }
