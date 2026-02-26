@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: avic-ai-backend
+  # mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/avic_ai?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+  # redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      password:
+      ttl: 3600 # 缓存过期时间（秒）
+  profiles:
+    active: local
+# knife4j
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+langchain4j:
+  open-ai:
+    chat-model:
+      base-url: https://api.deepseek.com
+      api-key: sk-fca8ec8fdc3749f2b8f607cc12e779ef
+      model-name: deepseek-chat
+#      strict-json-schema: true
+#      response-format: json_object
+      log-requests: true
+      log-responses: true
+    streaming-chat-model:
+      base-url: https://api.deepseek.com
+      api-key: sk-fca8ec8fdc3749f2b8f607cc12e779ef
+      model-name: deepseek-chat
+
+      log-requests: true
+      log-responses: true
+bigmodel:
+  api-key: 2f932e6d1d8e4887a873df2c2179b725.ZWtgFZJjG9AGIYXp
+
