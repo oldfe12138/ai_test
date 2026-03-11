@@ -1,6 +1,6 @@
 package com.avir.ai.ctrl;
 
-import com.avir.ai.entity.ChatHistory;
+import com.avir.ai.model.entity.ChatHistory;
 import com.avir.ai.service.ChatHistoryService;
 import com.mybatisflex.core.paginate.Page;
 import org.springframework.web.bind.annotation.*;

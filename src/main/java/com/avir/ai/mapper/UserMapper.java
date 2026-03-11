@@ -1,7 +1,7 @@
 package com.avir.ai.mapper;
 
 import com.mybatisflex.core.BaseMapper;
-import com.avir.ai.entity.User;
+import com.avir.ai.model.entity.User;
 
 /**
  * 用户 映射层。

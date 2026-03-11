@@ -1,6 +1,6 @@
 package com.avir.ai.service.impl;
 
-import com.avir.ai.entity.ChatHistory;
+import com.avir.ai.model.entity.ChatHistory;
 import com.avir.ai.mapper.ChatHistoryMapper;
 import com.avir.ai.service.ChatHistoryService;
 import com.mybatisflex.spring.service.impl.ServiceImpl;

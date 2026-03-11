@@ -1,6 +1,6 @@
 package com.avir.ai.service;
 
-import com.avir.ai.entity.ChatHistory;
+import com.avir.ai.model.entity.ChatHistory;
 import com.mybatisflex.core.service.IService;
 
 /**

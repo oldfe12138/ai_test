@@ -1,6 +1,6 @@
 package com.avir.ai.mapper;
 
-import com.avir.ai.entity.ChatHistory;
+import com.avir.ai.model.entity.ChatHistory;
 import com.mybatisflex.core.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
