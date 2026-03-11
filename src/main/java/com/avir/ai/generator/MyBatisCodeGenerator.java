@@ -1,8 +1,12 @@
 package com.avir.ai.generator;
 
+import cn.hutool.core.lang.Dict;
+import cn.hutool.setting.yaml.YamlUtil;
 import com.mybatisflex.codegen.Generator;
 import com.mybatisflex.codegen.config.GlobalConfig;
 import com.zaxxer.hikari.HikariDataSource;
+
+import java.util.Map;
 
 /**
  * MyBatis Flex 代码生成器
@@ -10,15 +14,15 @@ import com.zaxxer.hikari.HikariDataSource;
 public class MyBatisCodeGenerator {
 
     // 要生成的表名
-    private static final String[] TABLE_NAMES = {"chat_history"};
+    private static final String[] TABLE_NAMES = {"user"};
 
     public static void main(String[] args) {
         // 获取数据元信息
-//        Dict dict = YamlUtil.loadByPath("C:\\Code\\WorkSpace\\Java\\avic-ai\\ruoyi-admin\\src\\main\\resources\\application-druid.yml");
-//        Map<String, Object> dataSourceConfig = dict.getByPath("spring.datasource");
-//        String url = String.valueOf(dataSourceConfig.get("url"));
-//        String username = String.valueOf(dataSourceConfig.get("username"));
-//        String password = String.valueOf(dataSourceConfig.get("password"));
+        Dict dict = YamlUtil.loadByPath("application.yml");
+        Map<String, Object> dataSourceConfig = dict.getByPath("spring.datasource");
+        String url = String.valueOf(dataSourceConfig.get("url"));
+        String username = String.valueOf(dataSourceConfig.get("username"));
+        String password = String.valueOf(dataSourceConfig.get("password"));
         // 配置数据源
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/avic_ai?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8");
