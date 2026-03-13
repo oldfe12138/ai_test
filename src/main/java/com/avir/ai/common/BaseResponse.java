@@ -1,6 +1,6 @@
 package com.avir.ai.common;
 
-import com.yupi.yuaicodemother.exception.ErrorCode;
+import com.avir.ai.model.enums.ErrorCode;
 import lombok.Data;
 
 import java.io.Serializable;

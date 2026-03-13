@@ -1,6 +1,7 @@
 package com.avir.ai.common;
 
-import com.yupi.yuaicodemother.exception.ErrorCode;
+
+import com.avir.ai.model.enums.ErrorCode;
 
 /**
  * 快速构造响应结果的工具类
