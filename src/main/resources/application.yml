@@ -1,28 +1,27 @@
 spring:
   application:
-    name: avic-ai-backend
+    name: avic_ai
   # mysql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/avic_ai?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/avic_ai
     username: root
     password: 123456
-  # redis
-  data:
-    redis:
-      host: localhost
-      port: 6379
-      database: 0
-      password:
-      ttl: 3600 # 缓存过期时间（秒）
-  profiles:
-    active: local
+server:
+  port: 8123
+  servlet:
+    context-path: /api
+# springdoc-openapi
+springdoc:
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.yupi.yuaicodemother.controller
 # knife4j
 knife4j:
   enable: true
   setting:
     language: zh_cn
-
 langchain4j:
   open-ai:
     chat-model:
