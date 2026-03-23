@@ -80,9 +80,11 @@ public class CommonAiFacade {
             aiResponseBuilder.append(chunk);
             return chunk;
         }).doOnComplete(() -> {
+            // 3. 完成存储AI返回结果
             String aiResponse = aiResponseBuilder.toString();
             chatHistoryService.addChatMessage(chatId, aiResponse, ChatHistoryMessageTypeEnum.AI.getValue(), loginUser.getId());
         }).doOnError(error -> {
+            // 4. 若异常则回复失败并存储
             String errorMessage = "AI 回复失败：" + error.getMessage();
             chatHistoryService.addChatMessage(chatId, errorMessage, ChatHistoryMessageTypeEnum.AI.getValue(), loginUser.getId());
         });

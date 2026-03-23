@@ -65,3 +65,18 @@ create table chat_history
     INDEX idx_createTime (createTime),             -- 提升基于时间的查询性能
     INDEX idx_appId_createTime (appId, createTime) -- 游标查询核心索引
 ) comment '对话历史' collate = utf8mb4_unicode_ci;
+
+CREATE TABLE `user_chat` (
+                             `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'id',
+                             `chatName` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '应用名称',
+                             `initPrompt` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '应用初始化的 prompt',
+                             `priority` int NOT NULL DEFAULT '0' COMMENT '优先级',
+                             `userId` bigint NOT NULL COMMENT '创建用户id',
+                             `editTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '编辑时间',
+                             `createTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                             `updateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+                             `isDelete` tinyint NOT NULL DEFAULT '0' COMMENT '是否删除',
+                             PRIMARY KEY (`id`),
+                             KEY `idx_chatName` (`chatName`),
+                             KEY `idx_userId` (`userId`)
+) ENGINE=InnoDB AUTO_INCREMENT=391444373682544641 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='对话主表';
