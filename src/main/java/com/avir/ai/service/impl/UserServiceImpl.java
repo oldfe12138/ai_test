@@ -41,7 +41,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>  implements U
         if (userAccount.length() < 4) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "账号长度过短");
         }
-        if (userPassword.length() < 8 || checkPassword.length() < 8) {
+        if (userPassword.length() < 6 || checkPassword.length() < 6) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "密码长度过短");
         }
         if (!userPassword.equals(checkPassword)) {
