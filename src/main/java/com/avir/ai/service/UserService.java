@@ -1,6 +1,6 @@
 package com.avir.ai.service;
 
-import com.avir.ai.model.dto.UserQueryRequest;
+import com.avir.ai.model.dto.user.UserQueryRequest;
 import com.avir.ai.model.vo.LoginUserVO;
 import com.avir.ai.model.vo.UserVO;
 import com.mybatisflex.core.query.QueryWrapper;

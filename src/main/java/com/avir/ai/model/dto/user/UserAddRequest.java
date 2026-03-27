@@ -1,4 +1,4 @@
-package com.avir.ai.model.dto;
+package com.avir.ai.model.dto.user;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

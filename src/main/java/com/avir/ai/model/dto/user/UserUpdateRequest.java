@@ -1,4 +1,4 @@
-package com.avir.ai.model.dto;
+package com.avir.ai.model.dto.user;
 
 import lombok.Data;
 

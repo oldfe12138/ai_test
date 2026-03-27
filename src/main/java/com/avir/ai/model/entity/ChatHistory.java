@@ -49,7 +49,7 @@ public class ChatHistory implements Serializable {
      * 应用id
      */
     @Column("appId")
-    private Long appId;
+    private Long userChatId;
 
     /**
      * 创建用户id

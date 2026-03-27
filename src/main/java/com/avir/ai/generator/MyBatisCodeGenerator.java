@@ -14,7 +14,7 @@ import java.util.Map;
 public class MyBatisCodeGenerator {
 
     // 要生成的表名
-    private static final String[] TABLE_NAMES = {"user_chat"};
+    private static final String[] TABLE_NAMES = {"epoch_aoi"};
 
     public static void main(String[] args) {
         // 获取数据元信息

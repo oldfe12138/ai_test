@@ -1,4 +1,4 @@
-package com.avir.ai.model.dto;
+package com.avir.ai.model.dto.user;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -7,12 +7,12 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 用户登录
+ * 用户注册请求
  */
 @Data
-public class UserLoginRequest implements Serializable {
+public class UserRegisterRequest implements Serializable {
 
-    private static final long serialVersionUID = 3191241716373120793L;
+    private static final long serialVersionUID = 1L;
 
     /**
      * 账号
@@ -27,4 +27,11 @@ public class UserLoginRequest implements Serializable {
     @NotBlank(message = "密码不能为空")
     @Size(min = 6, max = 20, message = "密码长度必须在2-20个字符之间")
     private String userPassword;
+
+    /**
+     * 确认密码
+     */
+    @NotBlank(message = "密码不能为空")
+    @Size(min = 6, max = 20, message = "密码长度必须在2-20个字符之间")
+    private String checkPassword;
 }

@@ -4,7 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
 import com.avir.ai.exception.BusinessException;
-import com.avir.ai.model.dto.UserQueryRequest;
+import com.avir.ai.model.dto.user.UserQueryRequest;
 import com.avir.ai.model.enums.ErrorCode;
 import com.avir.ai.model.enums.UserRoleEnum;
 import com.avir.ai.model.vo.LoginUserVO;
@@ -88,7 +88,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>  implements U
         if (userAccount.length() < 4) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "账号长度过短");
         }
-        if (userPassword.length() < 8) {
+        if (userPassword.length() < 6) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "密码长度过短");
         }
         // 2. 加密

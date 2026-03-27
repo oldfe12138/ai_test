@@ -8,7 +8,7 @@ import com.avir.ai.common.ResultUtils;
 import com.avir.ai.constant.UserConstant;
 import com.avir.ai.exception.BusinessException;
 import com.avir.ai.exception.ThrowUtils;
-import com.avir.ai.model.dto.*;
+import com.avir.ai.model.dto.user.*;
 import com.avir.ai.model.entity.User;
 import com.avir.ai.model.enums.ErrorCode;
 import com.avir.ai.model.vo.LoginUserVO;

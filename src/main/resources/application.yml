@@ -8,15 +8,16 @@ spring:
     username: root
     password: 123456
 server:
-  port: 8123
+  port: 12138
   servlet:
     context-path: /api
+
 # springdoc-openapi
 springdoc:
   group-configs:
     - group: 'default'
       paths-to-match: '/**'
-      packages-to-scan: com.yupi.yuaicodemother.controller
+      packages-to-scan: com.avir.ai.ctrl
 # knife4j
 knife4j:
   enable: true
